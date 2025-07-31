@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USDT Deposit | Stake Miner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-coins"></i>
+                <span>Stake Miner</span>
+            </div>
+            <p>Secure USDT Deposit Portal</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="deposit-container">
+            <h1><i class="fas fa-wallet"></i> Deposit USDT (BEP-20)</h1>
+            
+            <div class="alert" id="alertBox"></div>
+            
+            <div class="deposit-method">
+                <h3><i class="fas fa-qrcode"></i> Scan QR Code</h3>
+                <img src="download.png" alt="USDT Deposit QR Code" class="qr-code">
+                <div class="address-container">
+                    <div class="address-box" id="usdtAddress">0x2fadb7330aefeb36c2d74855dcafecdd72a9dd2b</div>
+                    <button class="copy-btn" id="copyBtn">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="network-warning">
+                    <i class="fas fa-exclamation-triangle"></i> Only send USDT via BEP-20 network
+                </div>
+            </div>
+
+            <form id="depositForm">
+                <div class="form-group">
+                    <label for="userId"><i class="fas fa-user"></i> Stake ID:</label>
+                    <input type="text" id="userId" name="userId" required placeholder="Enter your account username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="amount"><i class="fas fa-money-bill-wave"></i> Amount (USDT):</label>
+                    <input type="number" id="amount" name="amount" min="10" required placeholder="Minimum 10 USDT">
+                </div>
+                
+                <div class="form-group">
+                    <label for="screenshot"><i class="fas fa-camera"></i> Transaction Proof:</label>
+                    <div class="file-upload">
+                        <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+                        <label for="screenshot" class="file-label">
+                            <i class="fas fa-cloud-upload-alt"></i> 
+                            <span>Upload Screenshot</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Deposit
+                </button>
+            </form>
+            
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> Deposit Instructions:</h3>
+                <ol>
+                    <li>Send only USDT (BEP-20) to the provided address</li>
+                    <li>Minimum deposit: 20 USDT (Max: 10,000 USDT)</li>
+                    <li>Double-check the network before sending</li>
+                    <li>Complete this form after transaction</li>
+                    <li>Processing time: 15-30 minutes (3+ confirmations)</li>
+                </ol>
+                <div class="note">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <strong>Note:</strong> Wrong network deposits will be lost permanently.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CryptoDeposit Pro. All rights reserved.</p>
+            <div class="support">
+                <i class="fas fa-headset"></i> Support: support@cryptodepositpro.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
