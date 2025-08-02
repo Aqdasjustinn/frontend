@@ -15,6 +15,53 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* support */
+.support-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: #4285F4; /* Google blue - change to match your theme */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.support-float svg {
+  width: 26px;
+  height: 26px;
+  fill: white;
+}
+
+.support-float:hover {
+  transform: scale(1.1);
+  background: #3367D6; /* Darker blue */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Optional chat bubble tooltip */
+.support-float::after {
+  content: "Need help?";
+  position: absolute;
+  right: 60px;
+  white-space: nowrap;
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.support-float:hover::after {
+  opacity: 1;
+}
+
 body {
     background-color: #f8f9fa;
     color: #333;
